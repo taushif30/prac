@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+      
+      <nav>
+        <h1>PRACTISE</h1>
+      </nav><br><br>
+
+<!-- ---------------------------------------------------------------------- -->
+    <h3>Q1- Difference between “ == “ and “ === “ operators.?    </h3>
+    <pre>
+    <b>ANS:</b> 1:"==" only checks value.Also Known as "Equility Operator"
+         2: "===" checks values as well as data types , also known as "Strictly Operator"
+
+    </pre>
+    <br><hr><br>
+    <!-- ----------------------------------------------------- -->
+    <h3>Q2 - What are the differences between var, let and const?</h3>
+    <pre>
+    <b>ANS:</b>VAR:- We can redeclare reassign it, also we can use it in Global and Local variable.Also support HOISTING.Was ther in ES5.Function and Global Scope.
+          var a=10;
+          var a=20; //Redeclare
+          a=30;  //Reinitialized
+          
+        LET:We cannot redeclare it but we can reassign it .No HOISTING can be perform.Introduced in ES6.Block scope and global scope.
+
+
+        CONST: We cannot redeclare it or cannot reassign it.Introduced in ES6.Block and Global scope.
+    </pre><br><hr><br>
+    <!-- ------------------------------------------------------- -->
+   <h3>Q3 -What is hoisting?</h3>
+   <pre>
+    <b>ANS:</b> JS mechanism in which when we access variable before declaring it or calling function without declaring them . It works only with VAR keyword. Cannot work in first class function.
+          Console.log(a)
+          var a=10; //UNDEFINED
+
+          abc();
+          function abc(){
+            console.log("Hello") //Hello
+          }
+   </pre><br><hr><br>
+   <!-- ----------------------------------------------------------- -->
+   <h3>Q4 -What is a Temporal Dead Zone?</h3><br>
+   <pre>
+    <b>ANS:</b>The Temporal Dead Zone (TDZ) is a concept introduced in ECMAScript 6 (ES6) that refers to a specific behavior that occurs when trying to access a variable before it has been <br>             declared using the let or const keyword.Return : Refrence Error.
+         Benefit : Improve the code quality.
+                   
+   </pre><br><hr><br>
+   <!-- ----------------------------------------------------------- -->
+
+   <h3>Q5 -What is execution context?</h3><br>
+   <pre>
+    <b>ANS:</b>When the JavaScript engine scans a script file, it makes an environment called the Execution Context that handles the entire transformation and execution of the code.
+   </pre><br><hr><br>
+   <!-- ---------------------------------------------------------- -->
+   
+   
+   <h3>Q6 - What is First class function?</h3><br>
+   <pre>
+    <b>ANS :</b>JS mechanism when we assign a function to a variable ,where variable act like a function ,like :-
+           Let a= function abc(){
+            console.log("Hello")
+           }
+           p();
+           
+    <b>OUTPUT :</b> Hello       
+   </pre><br><hr><br>
+   <!-- --------------------------------------------------------- -->
+   <h3>Q7- What is Pure Function ?</h3>
+   <pre>
+   <b>ANS:</b>Pure functions are functions that don't produce side effects and, when called with the same input parameters, will always return the same output.
+
+   function sum (a,b){
+    return a*b
+   }
+   sum(10,20) //200
+   sum(20,20) //400
+   </pre><br><hr><br>
+   <!-- -------------------------------------------------------- -->
+   <h3>Q8 - What is Execution Context?</h3>
+   <pre>
+    
+       "SYCNCHRONOUS JAVASCRIPT"
+    <b>ANS:</b>1:Global execution context.
+          2:Function execution context.
+          3:Memory allocation.
+          4:Code execution5:Call stack.
+
+        "ASCYNCRONOUS JAVASCRIPT"
+        1:Event loop.
+        2:Callback queue.
+        call stack.
+   </pre>
+
+</body>
+</html>
