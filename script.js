@@ -110,17 +110,128 @@
 // })
 
 
-function display(num,timeout){
-    return new Promise((res,rej)=>{
-        setTimeout(()=>{
-        console.log(num);
-        res('promise Resolved')
-        },timeout);
-    })
+// function display(num,timeout){
+//     return new Promise((res,rej)=>{
+//         setTimeout(()=>{
+//         console.log(num);
+//         res('promise Resolved')
+//         },timeout);
+//     })
+// }
+
+// display(1,1000)
+// .then(()=>display(2,2000))
+// .then(()=>display(3,3000))
+// .then(()=>display(4,4000))
+// .then(()=>display(5,5000))
+
+
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//function constructor
+
+
+
+// function person(name,age,course){
+//     this.name=name;
+//     this.age=age;
+//     this.course=course;
+// }
+// person.prototype.add="Ranchi"
+
+
+// let person1 = new person("EA23",23,"MERN");
+// let person2 = new person("EA24",23,"MERN");
+
+
+// console.log(person1)
+// console.log(person2)
+
+//------------------------------------------------------------------
+//CALL-APPY-BIND
+
+// const Person = {
+//    Name:"EA23",
+//    age:23,
+//    course:"MERN"
+// }
+
+// function Display(greet){
+//     console.log(`${this.Name} : ${this.age} :${greet}`)
+// }
+
+// Display.call(Person,"Hi")
+// Display.call(Person,["Hi","good"])
+
+//-----------------------------------------------------------------------
+
+//PROMISE CHAINING
+
+// async function func1(){
+//     const api = await fetch ('https://api.github.com/users')
+//     console.log(api)
+// }
+
+// axios -
+// func1()
+
+//----------------------------------------------------------------------
+// inheritance
+
+function Animal(name){
+    this.name= name;
 }
 
-display(1,1000)
-.then(()=>display(2,2000))
-.then(()=>display(3,3000))
-.then(()=>display(4,4000))
-.then(()=>display(5,5000))
+Animal.prototype.sayHello =function (){
+    console.log(`${this.name}`);
+}
+
+let Dog = Object.create(Animal);
+
+Dog.prototype.bark = function(){
+    console.log("Bark.......!!!")
+}
+
+let Animal1 = new Animal ('Cat') 
+Animal1.sayHello();
+
+Dog.sayHello();
+Dog.bark();
